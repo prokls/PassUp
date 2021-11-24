@@ -23,7 +23,7 @@ enum Error {
     DBOpenError { file: String, source: LibraryError },
     #[snafu(display("Could not prepare SQL Statement, {}", source))]
     SqlStatementError { source: LibraryError },
-    #[snafu(display("Could not retreive the {}, {}", row_name, source))]
+    #[snafu(display("Could not retrieve the {}, {}", row_name, source))]
     RowError { row_name: String, source: LibraryError },
     #[snafu(display("Could not query needed information, {}", source))]
     SqlQueryError { source: LibraryError },
