@@ -1,4 +1,4 @@
-#bin/sh
+#!/bin/sh
 
 sudo apt install nodejs nodejs-legacy npm libssl-dev pkg-config libsqlite3-dev
 npm install -g nightwatch
