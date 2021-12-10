@@ -265,7 +265,7 @@ fn parse_profile(profile: &Value) -> Result<Profile> {
     }
 
     let profile_type_map = create_profiletype_map();
-    let type_ = profile_type_map.get(&type_s_).unwrap();
+    let type_ = profile_type_map.get(&type_s_).ok_or(Error::ProfileTypeWrong)?;
     Ok(Profile::new((*type_).clone(), sources))
 }
 
